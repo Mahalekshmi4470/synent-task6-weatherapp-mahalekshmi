@@ -70,18 +70,18 @@ ToDo App
 📌 Submission Details
 
  🔗 GitHub Repository
-[View Repo]()
+[View Repo](https://github.com/Mahalekshmi4470/synent-task6-weatherapp-mahalekshmi)
 
  🌐 Live Demo
-[Open App]()
+[Open App](https://mahalekshmi4470.github.io/synent-task6-weatherapp-mahalekshmi/)
 
  🎥 Demo Video
-[Watch Video]()
+[Watch Video](https://www.linkedin.com/posts/mahalekshmi-s-1327ab324_internship-webdevelopment-learning-ugcPost-7456655108886609920-_SjN)
 
  📢 LinkedIn Sharing
 
 Shared on LinkedIn:
-
+https://www.linkedin.com/posts/mahalekshmi-s-1327ab324_internship-webdevelopment-learning-ugcPost-7456655108886609920-_SjN
 
 
 
