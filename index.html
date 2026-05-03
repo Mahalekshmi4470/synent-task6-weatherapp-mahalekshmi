@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast | Weather App</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="default-bg">
+    <main class="app-container">
+      <section class="weather-card glass-card">
+        <!-- HEADER -->
+        <header class="app-header">
+          <h1 class="app-title">
+            <i class="fa-solid fa-cloud-sun"></i>
+            SkyCast
+          </h1>
+        </header>
+
+        <!-- SEARCH -->
+        <section class="search-section">
+          <div class="input-group">
+            <label for="cityInput" class="visually-hidden">City Name</label>
+
+            <input
+              type="text"
+              id="cityInput"
+              placeholder="Enter city (e.g., London, Paris)"
+              autocomplete="off"
+            />
+
+            <button id="searchBtn" class="search-btn" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+
+          <!-- UNIT TOGGLE -->
+          <div class="unit-toggle-container">
+            <button id="unitToggleBtn" class="unit-toggle" type="button">
+              <i class="fa-solid fa-temperature-half"></i>
+              <span>°C / °F</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ERROR -->
+        <div id="errorMsg" class="error-message hidden"></div>
+
+        <!-- LOADING -->
+        <div id="loadingSpinner" class="spinner-overlay hidden">
+          <div class="spinner"></div>
+          <p class="loading-text">Fetching weather data...</p>
+        </div>
+
+        <!-- CONTENT -->
+        <section id="weatherContent">
+          <!-- EMPTY STATE -->
+          <div id="emptyState" class="empty-state">
+            <i class="fa-solid fa-earth-americas empty-icon"></i>
+            <h3>Search a city to view weather</h3>
+            <p>Get real-time weather updates instantly</p>
+          </div>
+
+          <!-- WEATHER INFO -->
+          <div id="weatherInfo" class="weather-info hidden">
+            <!-- CITY -->
+            <div class="city-header">
+              <h2 id="cityName">--</h2>
+              <span id="countryCode" class="country-badge"></span>
+            </div>
+
+            <!-- DATE -->
+            <div id="dateTimeDisplay" class="datetime">--</div>
+
+            <!-- MAIN WEATHER -->
+            <div class="weather-main">
+              <img
+                id="weatherIcon"
+                class="weather-icon"
+                src=""
+                alt="Weather icon"
+              />
+
+              <div class="temperature-section">
+                <span id="temperature" class="temp-value">--</span>
+                <span id="tempUnit" class="temp-unit">°C</span>
+              </div>
+
+              <p id="weatherDesc" class="weather-desc">--</p>
+            </div>
+
+            <!-- DETAILS -->
+            <div class="details-grid">
+              <div class="detail-card">
+                <span class="detail-label">
+                  <i class="fa-solid fa-droplet"></i>
+                  Humidity
+                </span>
+                <span id="humidity" class="detail-value">--%</span>
+              </div>
+
+              <div class="detail-card">
+                <span class="detail-label">
+                  <i class="fa-solid fa-wind"></i>
+                  Wind
+                </span>
+                <span id="windSpeed" class="detail-value">-- m/s</span>
+              </div>
+
+              <div class="detail-card">
+                <span class="detail-label">
+                  <i class="fa-solid fa-temperature-high"></i>
+                  Feels Like
+                </span>
+                <span id="feelsLike" class="detail-value">--°</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- HISTORY -->
+        <section class="history-section">
+          <div class="history-header">
+            <span>
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              Recent Searches
+            </span>
+
+            <button id="clearHistoryBtn" class="clear-history" type="button">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+
+          <div id="historyList" class="history-list">
+            <p class="history-placeholder">No recent cities</p>
+          </div>
+        </section>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="app-footer">
+        <p>
+          Powered by
+          <a href="https://openweathermap.org/" target="_blank">
+            OpenWeatherMap </a
+          >| Real-time weather data
+        </p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
