@@ -65,7 +65,6 @@ How to Run
 3. Run index.html in browser
 4. Enter any city name to get weather details
 
-ToDo App
 
 📌 Submission Details
 
